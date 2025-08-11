@@ -9,8 +9,8 @@ export interface AchievementsData {
 
 export const achievementsData: AchievementsData = {
   quantitative: [
-    { label: "해외 학회", value: "9편" },
-    { label: "국내 학회", value: "10편" },
+    { label: "해외 학회", value: "10편" },
+    { label: "국내 학회", value: "11편" },
     { label: "공개 SW", value: "11종" },
     { label: "인력 배출", value: "9명" }
   ],

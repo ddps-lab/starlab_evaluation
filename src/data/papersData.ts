@@ -69,6 +69,13 @@ export const papersData: PapersData = {
       image: "pygration-migration-detector.png",
       pdfUrl: "https://leeky.me/publications/workload-aware-migrate-detector.pdf",
       githubUrl: "https://github.com/ddps-lab/LiveMigrate-Detector"
+    },
+    {
+      title: "Multi-Node Spot Instances Availability Score Collection System",
+      venue: "The 34th ACM International Symposium on High-Performance Parallel and Distributed Computing (HPDC)",
+      grade: "poster",
+      impact: "본 논문은 클라우드 스팟 인스턴스의 기존 싱글 노드 가용성 데이터가 멀티 노드 환경에서 부정확함을 실험으로 입증함.\\n이를 해결하기 위해 멀티 노드 가용성 데이터를 수집하는 시스템을 구축하고, 17개 지역 844개 인스턴스 타입 데이터를 분석함.\\n기존 Spotlake 플랫폼을 확장하여 멀티 노드 가용성 점수를 웹 서비스로 공개 제공함.",
+      pdfUrl: "",
     }
   ],
   aceInferencePapers: [
@@ -88,6 +95,6 @@ export const papersData: PapersData = {
       impact: "본 논문은 서버리스 컴퓨팅 환경에서 실행 환경 설정의 사용자 정의 가능성(customizability)을 기준으로 일반 목적 FaaS(GPF), DNN 추론을 위한 특수 목적 FaaS(SPF), 서버리스 컨테이너 서비스(SCS) 를 비교 분석하였음.\\n인터랙티브한 DNN 추론 애플리케이션을 대상으로 실험한 결과, 사용자 정의가 가능한 환경일수록 성능 향상 여지가 크며, 이러한 환경이 서버리스 플랫폼에 적합함을 입증하였음.",
       pdfUrl: "https://leeky.me/publications/serverless-customization-dnn.pdf",
       githubUrl: "https://github.com/ddps-lab/serverless-container-performance-comparison"
-    }
+    },
   ]
 };
