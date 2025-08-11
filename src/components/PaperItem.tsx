@@ -19,6 +19,8 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
         return 'grade-good';
       case 'workshop':
         return 'grade-good';
+      case 'poster':
+        return 'grade-good';
       default:
         return '';
     }
@@ -36,6 +38,8 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
         return '데모';
       case 'workshop':
         return '워크샵';
+      case 'poster':
+        return '포스터';
       default:
         return '';
     }
