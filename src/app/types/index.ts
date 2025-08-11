@@ -24,7 +24,7 @@ export interface ModuleCardProps {
 export interface PaperData {
   title: string;
   venue: string;
-  grade?: 'SCIE' | 'excellent' | 'good' | 'demo' | 'workshop';
+  grade?: 'SCIE' | 'excellent' | 'good' | 'demo' | 'workshop' | 'poster';
   impact: string;
   image?: string;
   pdfUrl?: string;

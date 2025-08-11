@@ -9,7 +9,7 @@ export const APP_CONFIG = {
 export const NAV_ITEMS = [
   { id: 'research-development', label: '연구개발 성과', href: '#research-development' },
   { id: 'open-software', label: '공개 SW', href: '#open-software' },
-  { id: 'human-resources', label: '인력양성', href: '#human-resources' },
+  { id: 'human-resources', label: '인력 양성', href: '#human-resources' },
   { id: 'core-modules', label: '핵심 모듈', href: '#core-modules' },
 ] as const;
 

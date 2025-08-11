@@ -76,7 +76,7 @@ const StickyNav: React.FC = () => {
               className="nav-link"
               onClick={(e) => handleNavClick(e, '#human-resources')}
             >
-              인력양성
+              인력 양성
             </a>
           </li>
         </ul>
