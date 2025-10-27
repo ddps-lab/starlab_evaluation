@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./starlab_evalpage
+        working-directory: .
 
       - name: Run build
         run: npm run build
-        working-directory: ./starlab_evalpage
+        working-directory: .
 
       - name: Sync S3 Bucket
         env:
@@ -32,5 +32,5 @@ jobs:
         run: |
           aws s3 sync \
           --region ap-northeast-2 \
-          ./starlab_evalpage/build s3://starlab.ddps.cloud \
+          ./build s3://starlab.ddps.cloud \
            --delete
