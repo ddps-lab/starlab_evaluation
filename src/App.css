@@ -567,9 +567,9 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     white-space: nowrap;
     font-size: 0.875rem;
     font-weight: 500;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #d1d5db;
     background: #ffffff;
-    color: #374151;
+    color: #1a1a1a;
     text-decoration: none;
     border-radius: 6px;
     padding: 6px 12px;
@@ -584,36 +584,36 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
 }
 
 .action-btn--primary {
-    background: #1e40af;
-    color: white;
-    border-color: #1e40af;
+    background: #ffffff;
+    color: #1a1a1a;
+    border-color: #d1d5db;
 }
 
 .action-btn--primary:hover {
-    background: #1e3a8a;
-    border-color: #1e3a8a;
+    background: #f9fafb;
+    border-color: #9ca3af;
 }
 
 .action-btn--secondary {
-    background: #24292e;
-    color: white;
-    border-color: #24292e;
+    background: #ffffff;
+    color: #1a1a1a;
+    border-color: #d1d5db;
 }
 
 .action-btn--secondary:hover {
-    background: #1a1f26;
-    border-color: #1a1f26;
+    background: #f9fafb;
+    border-color: #9ca3af;
 }
 
 .action-btn--default {
     background: #ffffff;
-    color: #374151;
-    border-color: #e5e7eb;
+    color: #1a1a1a;
+    border-color: #d1d5db;
 }
 
 .action-btn--default:hover {
-    background: #f3f4f6;
-    border-color: #d1d5db;
+    background: #f9fafb;
+    border-color: #9ca3af;
 }
 
 .action-btn-icon {

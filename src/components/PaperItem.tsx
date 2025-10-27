@@ -61,6 +61,23 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
             className="paper-action-btn"
           />
         )}
+        {paper.acmUrl && (
+          <ActionButton
+            label="ACM"
+            url={paper.acmUrl}
+            variant="secondary"
+            className="paper-action-btn"
+          />
+        )}
+        {paper.ieeeUrl && (
+          <ActionButton
+            label="IEEE"
+            url={paper.ieeeUrl}
+            variant="secondary"
+            className="paper-action-btn"
+          />
+        )}
+        
         {paper.githubUrl && (
           <ActionButton
             label="GitHub"
