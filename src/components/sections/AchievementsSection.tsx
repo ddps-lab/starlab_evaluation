@@ -13,8 +13,8 @@ interface AchievementsSectionProps {
 
 export const AchievementsSection: React.FC<AchievementsSectionProps> = ({ achievements }) => {
   return (
-    <section className="modules-section">
-      <h2 className="section-title">1단계 최종 성과 요약 (2022-2025)</h2>
+    <section id="achievements">
+      <h2 className="main-section-title">1단계 최종 성과 요약 (2022-2025)</h2>
       <div className="modules-grid">
         <ModuleCard
           title="📊 정량적 성과"

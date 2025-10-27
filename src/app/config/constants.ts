@@ -7,6 +7,7 @@ export const APP_CONFIG = {
 
 // Navigation Configuration
 export const NAV_ITEMS = [
+  { id: 'achievements', label: '성과 요약', href: '#achievements' },
   { id: 'research-development', label: '연구개발 성과', href: '#research-development' },
   { id: 'open-software', label: '공개 SW', href: '#open-software' },
   { id: 'human-resources', label: '인력 양성', href: '#human-resources' },

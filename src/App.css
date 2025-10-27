@@ -79,11 +79,8 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #e2e8f0;
     z-index: 1000;
-    transition: transform 0.3s ease;
-}
-
-.sticky-nav.hidden {
-    transform: translateY(-100%);
+    display: block !important;
+    visibility: visible !important;
 }
 
 .nav-container {
@@ -132,6 +129,7 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     border-radius: 16px;
     padding: 8px 18px 18px 18px;
     margin-bottom: 16px;
+    margin-top: 80px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -216,13 +214,18 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     font-weight: 700;
     color: #1a1a1a;
     margin: 48px 0 32px 0;
-    text-align: center;
+    text-align: left;
     letter-spacing: -0.02em;
 }
 
 /* Content Sections */
 .content-section {
     margin-bottom: 48px;
+}
+
+/* Scroll margin for sections to account for fixed navbar */
+section[id] {
+    scroll-margin-top: 100px;
 }
 
 /* Summary Cards */

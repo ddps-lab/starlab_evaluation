@@ -9,7 +9,7 @@ interface OpenSourceSectionProps {
 export const OpenSourceSection: React.FC<OpenSourceSectionProps> = ({ software }) => {
   return (
     <section id="open-software" className="modules-section">
-      <h2 className="section-title">공개 SW 성과 (2022-2025)</h2>
+      <h2 className="main-section-title">공개 SW 성과 (2022-2025)</h2>
       <div className="summary-card">
         <div className="summary-content">
           <h3>전체 공개 SW 성과 총계</h3>

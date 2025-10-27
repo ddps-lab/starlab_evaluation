@@ -25,7 +25,7 @@ export const ACEModulesSection: React.FC<ACEModulesSectionProps> = ({ modules, f
 
       {/* Future Plans and Phase 2 Outlook */}
       <section className="modules-section">
-        <h2 className="section-title">2단계 연구개발 계획 및 기대효과</h2>
+        <h2 className="main-section-title">2단계 연구개발 계획 및 기대효과</h2>
         <div className="modules-grid modules-grid-3col">
           {futureModules.map((module, index) => (
             <ModuleCard key={index} {...module} />
