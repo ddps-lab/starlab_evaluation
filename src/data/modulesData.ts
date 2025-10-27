@@ -44,10 +44,10 @@ export const futureModulesData: ModuleCardProps[] = [
     title: "ACE-Train",
     description: "GNN 모델 학습, 양자화 적용, 병렬 컴퓨팅 환경에서의 성능 예측 및 실시간 학습 이관 시스템",
     metrics: [
-      { label: "GNN 실행시간 예측", value: "알고리즘 개발" },
-      { label: "양자화 학습 예측", value: "32/16비트" },
-      { label: "병렬 컴퓨팅 예측", value: "성능 알고리즘" },
-      { label: "실시간 학습 이관", value: "시스템 개발" }
+      { label: "GNN 실행시간 예측 알고리즘", value: "개발" },
+      { label: "양자화 학습", value: "예측" },
+      { label: "병렬 컴퓨팅 성능 예측", value: "알고리즘" },
+      { label: "실시간 학습 이관 시스템", value: "개발" }
     ],
     className: "ace-train"
   },
@@ -66,9 +66,9 @@ export const futureModulesData: ModuleCardProps[] = [
     title: "ACE-Inference",
     description: "GNN 모델 추론, 양자화 추론, TVM 컴파일러 최적화 및 서버리스 자동 배포 시스템",
     metrics: [
-      { label: "GNN 추론 예측", value: "알고리즘 개발" },
+      { label: "GNN 추론 예측 알고리즘", value: "개발" },
       { label: "양자화 추론 예측", value: "8비트" },
-      { label: "TVM 성능 예측", value: "컴파일러 기법" },
+      { label: "TVM 성능 예측", value: "컴파일러" },
       { label: "서버리스 자동 배포", value: "시스템 SW" }
     ],
     className: "ace-inference"

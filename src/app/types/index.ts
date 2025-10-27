@@ -30,6 +30,8 @@ export interface PaperData {
   pdfUrl?: string;
   githubUrl?: string;
   websiteUrl?: string;
+  acmUrl?: string;
+  ieeeUrl?: string;
 }
 
 export interface SoftwareData {

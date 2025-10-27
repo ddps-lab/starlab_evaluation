@@ -79,11 +79,8 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #e2e8f0;
     z-index: 1000;
-    transition: transform 0.3s ease;
-}
-
-.sticky-nav.hidden {
-    transform: translateY(-100%);
+    display: block !important;
+    visibility: visible !important;
 }
 
 .nav-container {
@@ -132,6 +129,7 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     border-radius: 16px;
     padding: 8px 18px 18px 18px;
     margin-bottom: 16px;
+    margin-top: 80px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -181,6 +179,7 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     line-height: 1.3;
     word-break: keep-all;
     overflow-wrap: break-word;
+    white-space: pre-line;
 }
 
 .project-subtitle {
@@ -215,13 +214,18 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     font-weight: 700;
     color: #1a1a1a;
     margin: 48px 0 32px 0;
-    text-align: center;
+    text-align: left;
     letter-spacing: -0.02em;
 }
 
 /* Content Sections */
 .content-section {
     margin-bottom: 48px;
+}
+
+/* Scroll margin for sections to account for fixed navbar */
+section[id] {
+    scroll-margin-top: 100px;
 }
 
 /* Summary Cards */
@@ -370,7 +374,8 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 80px;
+    min-height: 120px;
+    max-height: 120px;
     border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
@@ -556,6 +561,70 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
 }
 
 
+/* Action Button - Reusable component */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    height: 32px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn--primary {
+    background: #ffffff;
+    color: #1a1a1a;
+    border-color: #d1d5db;
+}
+
+.action-btn--primary:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.action-btn--secondary {
+    background: #ffffff;
+    color: #1a1a1a;
+    border-color: #d1d5db;
+}
+
+.action-btn--secondary:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.action-btn--default {
+    background: #ffffff;
+    color: #1a1a1a;
+    border-color: #d1d5db;
+}
+
+.action-btn--default:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.action-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1em;
+}
+
 /* Paper action buttons */
 .paper-actions {
     display: flex;
@@ -564,35 +633,9 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     align-items: center;
 }
 
-.paper-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+.paper-action-btn {
     font-size: 0.875rem;
-    font-weight: 500;
-    border: 1px solid #e5e7eb;
-    background: #ffffff;
-    color: #374151;
-    text-decoration: none;
-    border-radius: 6px;
     padding: 6px 12px;
-    height: 32px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-
-.paper-btn.pdf-btn {
-    background: #1e40af;
-    color: white;
-    border-color: #1e40af;
-}
-
-
-.paper-btn.github-btn {
-    background: #24292e;
-    color: white;
-    border-color: #24292e;
 }
 
 
@@ -601,6 +644,7 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     color: #64748b;
 }
 
+/* Grade Badge - Reusable component */
 .grade-badge {
     display: inline-block;
     padding: 4px 8px;
@@ -609,6 +653,37 @@ small { font-size: clamp(0.9rem, 2.2dvw, 1.125rem); line-height: 1.5; word-break
     font-weight: 600;
 }
 
+.grade-badge--scie {
+    background: #fecaca;
+    color: #b91c1c;
+}
+
+.grade-badge--excellent {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.grade-badge--good {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.grade-badge--demo {
+    background: #dbeafe;
+    color: #0369a1;
+}
+
+.grade-badge--workshop {
+    background: #d1d5db;
+    color: #374151;
+}
+
+.grade-badge--poster {
+    background: #c7d2fe;
+    color: #4f46e5;
+}
+
+/* Backward compatibility for old class names */
 .grade-scie {
     background: #fecaca;
     color: #b91c1c;

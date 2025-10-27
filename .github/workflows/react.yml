@@ -1,0 +1,36 @@
+name: react
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./starlab_evalpage
+
+      - name: Run build
+        run: npm run build
+        working-directory: ./starlab_evalpage
+
+      - name: Sync S3 Bucket
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 sync \
+          --region ap-northeast-2 \
+          ./starlab_evalpage/build s3://starlab.ddps.cloud \
+           --delete

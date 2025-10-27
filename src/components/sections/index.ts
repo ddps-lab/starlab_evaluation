@@ -1,8 +1,8 @@
 // Section Components
 export { ProjectHeader } from './ProjectHeader';
 export { AchievementsSection } from './AchievementsSection';
-
-// You can add more section exports here as they are created
-// export { ResearchSection } from './ResearchSection';
-// export { SoftwareSection } from './SoftwareSection';
-// export { TrainingSection } from './TrainingSection';
+export { ResearchDevelopmentSection } from './ResearchDevelopmentSection';
+export { OpenSourceSection } from './OpenSourceSection';
+export { HumanResourcesSection } from './HumanResourcesSection';
+export { CallistoSection } from './CallistoSection';
+export { ACEModulesSection } from './ACEModulesSection';
