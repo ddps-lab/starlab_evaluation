@@ -44,3 +44,6 @@ export const CLASS_NAMES = {
     aceBlue: 'ace-blue',
   },
 } as const;
+
+// Re-export breakpoints for easy access
+export { BREAKPOINTS, MEDIA_QUERIES, createMediaQuery, getDeviceType } from './breakpoints';
