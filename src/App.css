@@ -320,6 +320,11 @@ section[id] {
     background: #ffffff;
 }
 
+.module-card.ace-platform {
+    border: 2px solid rgba(26, 115, 232, 0.25);
+    background: #ffffff;
+}
+
 .module-card.ace-blue {
     border: 2px solid #45c4ff95;
     background: #ffffff;
