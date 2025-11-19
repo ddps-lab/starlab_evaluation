@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { PaperData } from '../app/types';
 import ActionButton from './ui/ActionButton';
 import GradeBadge from './ui/GradeBadge';
@@ -11,37 +12,42 @@ interface PaperItemProps {
 const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
 
   return (
-    <div className={`paper-item ${className}`}>
-      <div className="paper-header">
-        <div className="paper-title">{paper.title}</div>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ y: -4, scale: 1.01 }}
+      className={`card group ${className}`}
+    >
+      <div className="flex gap-8 justify-between items-start mb-3">
+        <div className="text-xl font-bold leading-tight transition-colors text-secondary-900 group-hover:text-primary-600">
+          {paper.title}
+        </div>
         {paper.grade && (
           <GradeBadge grade={paper.grade as any} />
         )}
       </div>
-      <div className="paper-venue">{paper.venue}</div>
+      <div className="text-sm font-bold text-primary-600 uppercase tracking-wider bg-primary-50 px-3 py-1.5 rounded-lg inline-block self-start">
+        {paper.venue}
+      </div>
       
       {paper.image && (
-        <div className="paper-image">
+        <div className="my-2">
           <img 
             src={`${process.env.PUBLIC_URL}/assets/images/${paper.image}`} 
             alt={paper.title}
-            style={{
-              width: '100%',
-              maxWidth: '400px',
-              height: 'auto',
-              borderRadius: '8px',
-              margin: '10px 0'
-            }}
+            className="w-full max-w-[450px] h-auto rounded-xl hover:shadow-xl transition-shadow duration-300"
           />
         </div>
       )}
       
-      <div className="paper-impact">
+      <div className="text-base leading-relaxed text-secondary-700">
         {paper.impact.split('\\n').map((line, index) => (
           <div key={index}>
             {line.includes(':') ? (
               <>
-                <strong>{line.split(':')[0]}:</strong>
+                <strong className="text-secondary-900">{line.split(':')[0]}:</strong>
                 {line.split(':')[1]}
               </>
             ) : (
@@ -52,13 +58,13 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
         ))}
       </div>
       
-      <div className="paper-actions">
+      <div className="flex flex-wrap gap-3 items-center mt-2">
         {paper.pdfUrl && (
           <ActionButton
             label="PDF"
             url={paper.pdfUrl}
             variant="primary"
-            className="paper-action-btn"
+            className="px-4 py-2 text-sm font-semibold"
           />
         )}
         {paper.acmUrl && (
@@ -66,7 +72,7 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
             label="ACM"
             url={paper.acmUrl}
             variant="secondary"
-            className="paper-action-btn"
+            className="px-4 py-2 text-sm font-semibold"
           />
         )}
         {paper.ieeeUrl && (
@@ -74,7 +80,7 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
             label="IEEE"
             url={paper.ieeeUrl}
             variant="secondary"
-            className="paper-action-btn"
+            className="px-4 py-2 text-sm font-semibold"
           />
         )}
         
@@ -83,7 +89,7 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
             label="GitHub"
             url={paper.githubUrl}
             variant="secondary"
-            className="paper-action-btn"
+            className="px-4 py-2 text-sm font-semibold"
           />
         )}
         {paper.websiteUrl && (
@@ -91,11 +97,11 @@ const PaperItem: React.FC<PaperItemProps> = ({ paper, className = '' }) => {
             label="Website"
             url={paper.websiteUrl}
             variant="secondary"
-            className="paper-action-btn"
+            className="px-4 py-2 text-sm font-semibold"
           />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

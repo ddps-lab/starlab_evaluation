@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
 import { StickyNav } from './components/layout';
 import MainPage from './pages/MainPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="min-h-screen flex flex-col bg-secondary-50">
       <StickyNav />
       <MainPage />
     </div>

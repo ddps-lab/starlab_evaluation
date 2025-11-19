@@ -45,7 +45,8 @@ export const futureModulesData: ModuleCardProps[] = [
       "QAT 기반 정밀도-ISA 성능 벤치마크 데이터베이스 구축",
       "LLM QAT 시간 예측 알고리즘 개발"
     ],
-    className: "ace-train"
+    className: "ace-train",
+    icon: "ACE-Train.png"
   },
   {
     title: "ACE-Inference",
@@ -55,7 +56,8 @@ export const futureModulesData: ModuleCardProps[] = [
       "스팟 인스턴스 활용 LLM 서빙 시스템",
       "GPU 외 이기종 컴퓨팅을 활용한 분산 서빙 시스템 최적화"
     ],
-    className: "ace-inference"
+    className: "ace-inference",
+    icon: "ACE-Inference.png"
   },
   {
     title: "ACE-Cost",
@@ -65,7 +67,8 @@ export const futureModulesData: ModuleCardProps[] = [
       "랭킹 기반 클러스터 조합 추천 시스템",
       "워크로드 최적화 인스턴스 추천 시스템"
     ],
-    className: "ace-cost"
+    className: "ace-cost",
+    icon: "ACE-Cost.png"
   },
   {
     title: "ACE-Platform",
@@ -74,6 +77,7 @@ export const futureModulesData: ModuleCardProps[] = [
       "ACE-Cost 통합 및 비용 최적화 구현",
       "ACE-Train/Inference 통합 환경 구현",
     ],
-    className: "ace-platform"
+    className: "ace-platform",
+    icon: "ACE-Platform.png"
   }
 ];

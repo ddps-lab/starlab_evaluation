@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-secondary-50 text-secondary-900 font-sans antialiased relative min-h-screen break-keep;
+    /* Subtle Grid Pattern Background */
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(215,98%,61%,0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(256,98%,61%,0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(256,98%,61%,0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(215,98%,61%,0.1) 0px, transparent 50%),
+      linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-secondary-900 tracking-tight;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-300/50 rounded-full backdrop-blur-sm hover:bg-secondary-400/70 transition-colors;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .container-custom {
+    @apply max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white shadow-lg shadow-primary-600/30 hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/40 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-secondary-700 border border-secondary-200 shadow-sm hover:bg-secondary-50 hover:text-secondary-900 hover:border-secondary-300;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/40 rounded-2xl p-6 sm:p-8 shadow-lg shadow-secondary-900/5 transition-all duration-300 hover:shadow-xl hover:shadow-secondary-900/10 hover:-translate-y-1 hover:bg-white/90;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-700 to-primary-500 mb-2 inline-block;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-secondary-500 font-medium mb-8 md:mb-12 max-w-2xl;
+  }
 }

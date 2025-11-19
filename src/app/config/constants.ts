@@ -12,6 +12,7 @@ export const NAV_ITEMS = [
   { id: 'open-software', label: '공개 SW', href: '#open-software' },
   { id: 'human-resources', label: '인력 양성', href: '#human-resources' },
   { id: 'core-modules', label: '핵심 모듈', href: '#core-modules' },
+  { id: 'future-plans', label: '2단계 계획', href: '#future-plans' },
 ] as const;
 
 // Asset Paths
@@ -25,6 +26,9 @@ export const ASSET_PATHS = {
     ictLogo: '/assets/images/ICT_logo.png',
     starlabLogo: '/assets/images/Starlab_logo.png',
     ddpsLogo: '/assets/images/DDPS_logo.png',
+    aceTrain: '/assets/images/ACE-Train.png',
+    aceInference: '/assets/images/ACE-Inference.png',
+    aceCost: '/assets/images/ACE-Cost.png',
   },
 } as const;
 

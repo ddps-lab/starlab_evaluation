@@ -6,7 +6,7 @@ export const trainingData: TrainingData[] = [
     description: "클라우드 컴퓨팅 분야 최신 기술이 가장 많이 발표되는 re:Invent 참석하여 최신 연구 및 개발 결과 학습",
     participants: ["2022년: 3명", "2023년: 1명"],
     className: "ace-train",
-    icon: "reinvent-white.png"
+    icon: "reinvent.png"
   },
   {
     title: "AWS Summit 참석 (2023-2024)",

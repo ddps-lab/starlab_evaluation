@@ -8,12 +8,7 @@ interface TrainingItemProps {
 const TrainingItem: React.FC<TrainingItemProps> = ({ training }) => {
   const getIconStyle = () => {
     if (training.icon) {
-      if (training.icon === 'reinvent-white.png') {
-        return {
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${training.icon})`,
-          backgroundColor: '#232f3e'
-        };
-      } else if (training.icon === 'aws_summit.png') {
+      if (training.icon === 'aws_summit.png') {
         return {
           background: 'linear-gradient(135deg, #3498db, #8e44ad)'
         };
@@ -29,39 +24,39 @@ const TrainingItem: React.FC<TrainingItemProps> = ({ training }) => {
   };
 
   return (
-    <div className={`training-item ${training.className || ''}`}>
+    <div className={`card group flex flex-col gap-4 ${training.className || ''}`}>
       <div 
-        className={`training-icon ${training.icon?.replace('.png', '') || ''}`}
+        className={`w-16 h-16 rounded-lg bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-hidden shadow-sm border border-secondary-200 group-hover:scale-105 transition-transform duration-300 ${training.icon?.replace('.png', '') || ''}`}
         style={getIconStyle()}
       >
         {training.icon === 'aws_summit.png' && (
           <img 
             src={`${process.env.PUBLIC_URL}/assets/images/${training.icon}`} 
             alt="AWS Summit" 
-            className="summit-logo" 
+            className="object-contain p-2 max-w-full max-h-full" 
           />
         )}
         {training.icon === 'Immersion_day.png' && (
           <img 
             src={`${process.env.PUBLIC_URL}/assets/images/${training.icon}`} 
             alt="SageMaker Immersion Day" 
-            className="immersion-logo" 
+            className="object-contain p-2 max-w-full max-h-full" 
           />
         )}
         {training.icon === 'KIISE_logo.png' && (
           <img 
             src={`${process.env.PUBLIC_URL}/assets/images/${training.icon}`} 
             alt="한국정보과학회" 
-            className="kiise-logo" 
+            className="object-contain p-2 max-w-full max-h-full" 
           />
         )}
       </div>
-      <div className="training-content">
-        <h4>{training.title}</h4>
-        <p>{training.description}</p>
-        <div className="participation-details">
+      <div className="flex flex-col flex-grow">
+        <h4 className="mb-2 text-xl font-bold text-primary-900">{training.title}</h4>
+        <p className="mb-4 text-base leading-relaxed text-secondary-600">{training.description}</p>
+        <div className="flex flex-wrap gap-2 mt-auto">
           {training.participants.map((participant, index) => (
-            <span key={index} className="participant-count">
+            <span key={index} className="bg-secondary-100 text-secondary-600 text-sm font-semibold px-2.5 py-1 rounded-full border border-secondary-200">
               {participant}
             </span>
           ))}
