@@ -66,5 +66,14 @@ export const futureModulesData: ModuleCardProps[] = [
       "워크로드 최적화 인스턴스 추천 시스템"
     ],
     className: "ace-cost"
+  },
+  {
+    title: "ACE-Platform",
+    metrics: [
+      "Callisto 확장 통합 플랫폼 기능 구현",
+      "ACE-Cost 통합 및 비용 최적화 구현",
+      "ACE-Train/Inference 통합 환경 구현",
+    ],
+    className: "ace-platform"
   }
 ];
