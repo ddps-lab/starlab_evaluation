@@ -14,8 +14,7 @@ export interface MetricItem {
 // Component Props Types
 export interface ModuleCardProps {
   title: string;
-  description: string;
-  metrics: MetricItem[];
+  metrics: string[];
   className?: string;
   icon?: string;
 }
@@ -61,10 +60,10 @@ export interface SiteData {
   software: SoftwareData[];
   training: TrainingData[];
   achievements: {
-    quantitative: MetricItem[];
-    technical: MetricItem[];
-    impact: MetricItem[];
-    humanResources: MetricItem[];
+    quantitative: string[];
+    technical: string[];
+    impact: string[];
+    humanResources: string[];
   };
   futureModules: ModuleCardProps[];
 }

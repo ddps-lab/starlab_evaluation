@@ -11,14 +11,14 @@ export const trainingData: TrainingData[] = [
   {
     title: "AWS Summit 참석 (2023-2024)",
     description: "AWS 최신 서비스 및 기술 동향 학습, 2024년에는 AWS Gameday에서 2위 입상",
-    participants: ["2023년: 3명", "2024년: 4명 (Gameday 2위)"],
+    participants: ["2023년: 3명", "2024년: 4명", "2025년: 1명"],
     className: "ace-cost",
     icon: "aws_summit.png"
   },
   {
-    title: "SageMaker Immersion Day (2022)",
-    description: "클라우드 분야 선두업체인 AWS의 지원으로 SageMaker Immersion Day 참석",
-    participants: ["참석인원: 5명"],
+    title: "CS 분야 우수 학술대회 참여",
+    description: "CS 분야 우수 학술대회에 참여하여 논문을 발표하는 경험을 가짐",
+    participants: ["최우수학술대회: 1건", "우수학술대회: 4건"],
     className: "ace-inference",
     icon: "Immersion_day.png"
   },
