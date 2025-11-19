@@ -5,25 +5,13 @@ export const softwareData: SoftwareData[] = [
     title: "Serverless-FaaS-Workbench",
     description: "서버리스 컴퓨팅 환경에서 다양한 워크로드 성능 측정 및 비교 도구",
     url: "https://github.com/ddps-lab/serverless-faas-workbench",
-    stars: 138
-  },
-  {
-    title: "DoS",
-    description: "DNN 기반 지연시간 예측기로 최적 SPMM 구현을 추천하는 DoS 시스템",
-    url: "https://github.com/ddps-lab/dos",
-    stars: 18
+    stars: 144
   },
   {
     title: "SpotLake",
     description: "다양한 클라우드 서비스의 스팟 인스턴스 데이터 아카이빙 서비스",
     url: "https://spotlake.ddps.cloud/",
-    stars: 17
-  },
-  {
-    title: "Edge-Inference",
-    description: "엣지 환경에서의 딥러닝 모델 추론 최적화 도구",
-    url: "https://github.com/ddps-lab/edge-inference",
-    stars: 16
+    stars: 18
   },
   {
     title: "Lambda-Optimize-Serving",
@@ -32,16 +20,10 @@ export const softwareData: SoftwareData[] = [
     stars: 16
   },
   {
-    title: "Profet",
-    description: "모델 아키텍처 정보 없이도 CNN 훈련 시간을 예측하는 프로파일링 기반 시스템",
-    url: "https://github.com/ddps-lab/profet",
-    stars: 15
-  },
-  {
-    title: "LiveMigrate-Detector",
-    description: "특정 Workload 에서 사용되는 CPU Feature 추출 도구",
-    url: "https://github.com/ddps-lab/LiveMigrate-Detector",
-    stars: 14
+    title: "Edge-Inference",
+    description: "엣지 환경에서의 딥러닝 모델 추론 최적화 도구",
+    url: "https://github.com/ddps-lab/edge-inference",
+    stars: 16
   },
   {
     title: "Serverless-Container-Performance-Comparison",
@@ -53,6 +35,12 @@ export const softwareData: SoftwareData[] = [
     title: "Spot-Checker",
     description: "스팟 인스턴스 데이터셋의 유효성 테스트 자동화 서비스",
     url: "https://github.com/ddps-lab/spot-checker",
+    stars: 14
+  },
+  {
+    title: "LiveMigrate-Detector",
+    description: "특정 Workload 에서 사용되는 CPU Feature 추출 도구",
+    url: "https://github.com/ddps-lab/LiveMigrate-Detector",
     stars: 14
   },
   {

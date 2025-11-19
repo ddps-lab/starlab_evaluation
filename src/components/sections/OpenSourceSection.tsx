@@ -13,7 +13,7 @@ export const OpenSourceSection: React.FC<OpenSourceSectionProps> = ({ software }
       <div className="summary-card">
         <div className="summary-content">
           <h3>전체 공개 SW 성과 총계</h3>
-          <p><strong>908개 스타, 9,112개 커밋, 1,012개 이슈, 978개 PR</strong></p>
+          <p><strong>837개 스타, 8,142개 커밋, 1,443개 이슈, 1106개 PR</strong></p>
         </div>
       </div>
 
