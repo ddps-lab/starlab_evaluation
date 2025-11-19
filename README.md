@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# ACE-AI 성과 대시보드
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+한양대학교 DDPS Lab에서 수행한 **ACE-AI 국책 과제**의 1단계 성과와 2단계 연구개발 계획을 소개하는 반응형 대시보드입니다.  
+프로젝트 헤더, 연구 개발 실적, 공개 SW, 인력 양성, 핵심/미래 모듈 등의 정보를 한눈에 볼 수 있도록 시각화했습니다.
 
-## Available Scripts
+![ACE-AI Architecture](public/assets/images/ACE-AI.png)
 
-In the project directory, you can run:
+## 주요 특징
 
-### `npm start`
+- **프로젝트 하이라이트**: 과제 개요, 기관 정보, 로고를 강조한 헤더 애니메이션
+- **연구 실적 섹션**: ACE-Train / ACE-Inference / ACE-Cost 논문 및 핵심 기술을 카드 형태로 정리
+- **Callisto 통합 서비스**: 비용 효율성, 오픈소스 생태계 등 핵심 지표를 시각적으로 표현
+- **공개 SW & 인력 양성**: 카드형 리스트로 성과를 정량/정성적으로 전달
+- **미래 계획**: 2단계 연구개발 로드맵 및 모듈별 목표를 모션 카드로 설명
+- **전역 스타일**: Tailwind CSS + Pretendard 폰트, Glassmorphism 카드, 모바일 네비게이션 지원
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 기술 스택
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| 영역 | 사용 기술 |
+| --- | --- |
+| 프레임워크 | React 18, TypeScript |
+| 스타일 | Tailwind CSS, custom animations, glassmorphism cards |
+| 상태/데이터 | Custom hooks (`useSiteData`)로 정적 데이터 주입 |
+| 기타 | Framer Motion, Vite Scripts(CRA 기반) |
 
-### `npm test`
+## 프로젝트 구조
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├─ app/             # config, hooks, types, utils
+├─ components/      # UI 구성 요소 및 섹션 컴포넌트
+├─ data/            # 정적 JSON 유사 데이터 모음
+├─ pages/           # MainPage
+└─ index.tsx        # 엔트리 포인트
+```
 
-### `npm run build`
+## 시작하기
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. 사전 요구 사항
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js 18+
+- npm 9+
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. 의존성 설치
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. 개발 서버 실행
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+브라우저에서 `http://localhost:3000`을 열면 됩니다. 코드 저장 시 자동으로 리로드됩니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 4. 프로덕션 빌드
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`build/` 폴더에 최적화된 정적 파일이 생성됩니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 커스텀 데이터 수정
+
+- `src/data/*.ts` 파일에서 성과 데이터 및 모듈 정보를 변경할 수 있습니다.
+- 자산 이미지: `public/assets/images` 에 위치하며, `src/app/config/constants.ts`에서 경로를 선언합니다.
